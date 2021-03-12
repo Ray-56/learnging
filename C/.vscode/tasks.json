@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc build active file",
+			"command": "/usr/bin/gcc",
+			// "args": [
+			// 	"-g",
+			// 	"${file}",
+			// 	"-o",
+			// 	"${fileDirname}/${fileBasenameNoExtension}"
+			// ],
+			"args": [
+				"-g", // 编译命令
+				"${workspaceFolder}/test.c", // 当前 workspace 下的 test.c 文件
+				"-o", // 输出文件命令
+				"${workspaceFolder}/test.o", // 生成的可执行文件的路径及名称
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
+}
