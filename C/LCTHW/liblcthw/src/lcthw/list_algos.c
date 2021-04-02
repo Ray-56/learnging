@@ -31,8 +31,10 @@ int List_bubble_sort(List *list, List_compare cmp)
   return 0;
 }
 
-// inline -> static; 不知道为什么使用 inline 会报错 MacOS
-static List *List_merge(List *left, List *right, List_compare cmp)
+// inline -> static;
+// 不知道为什么使用 inline 会报错 MacOS
+// 也可以改为 inline -> static inline
+static inline List *List_merge(List *left, List *right, List_compare cmp)
 {
   List *result = List_create();
   void *val = NULL;
