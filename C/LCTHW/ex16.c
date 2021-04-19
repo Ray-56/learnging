@@ -22,7 +22,7 @@ struct Person *Person_create(char *name, int age, int height, int weight) {
 	return who;
 };
 
-void Person_destory(struct Person *who) {
+void Person_destroy(struct Person *who) {
 	assert(who != NULL);
 
 	free(who->name);
@@ -62,9 +62,9 @@ int main(int agrc, char *argv[])
 	frank->weight += 20;
 	Person_print(frank);
 
-	// destory them both so we clean up
-	Person_destory(joe);
-	Person_destory(frank);
+	// destroy them both so we clean up
+	Person_destroy(joe);
+	Person_destroy(frank);
 
 	return 0;
 }

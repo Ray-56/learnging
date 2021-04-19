@@ -66,10 +66,10 @@ void Hashmap_destroy(Hashmap *map)
           for (j = 0; j < DArray_count(bucket); j++) {
             free(DArray_get(bucket, j));
           }
-          DArray_destory(bucket);
+          DArray_destroy(bucket);
         }
       }
-      DArray_destory(map->buckets);
+      DArray_destroy(map->buckets);
     }
 
     free(map);

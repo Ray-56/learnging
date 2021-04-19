@@ -74,7 +74,7 @@ int DArray_contract(DArray *array)
   return DArray_resize(array, new_size + 1);
 }
 
-void DArray_destory(DArray *array)
+void DArray_destroy(DArray *array)
 {
   if (array) {
     if (array->contents) free(array->contents);
@@ -82,10 +82,10 @@ void DArray_destory(DArray *array)
   }
 }
 
-void DArray_clear_destory(DArray *array)
+void DArray_clear_destroy(DArray *array)
 {
   DArray_clear(array);
-  DArray_destory(array);
+  DArray_destroy(array);
 }
 
 int DArray_push(DArray *array, void *el)

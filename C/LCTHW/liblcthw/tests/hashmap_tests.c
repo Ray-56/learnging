@@ -42,7 +42,7 @@ char *test_create()
   return NULL;
 }
 
-char *test_destory()
+char *test_destroy()
 {
   Hashmap_destroy(map);
 
@@ -114,7 +114,7 @@ char *all_tests()
   mu_run_test(test_get_set);
   mu_run_test(test_traverse);
   mu_run_test(test_delete);
-  mu_run_test(test_destory);
+  mu_run_test(test_destroy);
 
   return NULL;
 }

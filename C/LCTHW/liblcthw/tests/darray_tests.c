@@ -17,9 +17,9 @@ char *test_create()
   return NULL;
 }
 
-char *test_destory()
+char *test_destroy()
 {
-  DArray_destory(array);
+  DArray_destroy(array);
 
   return NULL;
 }
@@ -115,7 +115,7 @@ char *all_tests()
   mu_run_test(test_remove);
   mu_run_test(test_expand_contract);
   mu_run_test(test_push_pop);
-  mu_run_test(test_destory);
+  mu_run_test(test_destroy);
 
   return NULL;
 }

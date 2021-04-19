@@ -4,7 +4,7 @@
 #include <assert.h>
 #include "object.h"
 
-void Object_destory(void *self)
+void Object_destroy(void *self)
 {
 	Object *obj = self;
 
@@ -43,7 +43,7 @@ void *Object_new(size_t size, Object proto, char *description)
 	// setup the default functions in case they aren't set
 	if (!proto.init) proto.init = Object_init;
 	if (!proto.describe) proto.describe = Object_describe;
-	if (!proto.destory) proto.destory = Object_destory;
+	if (!proto.destroy) proto.destroy = Object_destroy;
 	if (!proto.attack) proto.attack = Object_attack;
 	if (!proto.move) proto.move = Object_move;
 
@@ -58,7 +58,7 @@ void *Object_new(size_t size, Object proto, char *description)
 	// initialize it with whatever init we were given
 	if (!el->init(el)) {
 		// looks like it didn't initialize properly
-		el->destory(el);
+		el->destroy(el);
 		return NULL;
 	} else {
 		// all done, we made an object of any type

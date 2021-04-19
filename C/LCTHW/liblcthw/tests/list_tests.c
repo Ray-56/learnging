@@ -15,9 +15,9 @@ char *test_create()
   return NULL;
 }
 
-char *test_destory()
+char *test_destroy()
 {
-  List_clear_destory(list);
+  List_clear_destroy(list);
   return NULL;
 }
 
@@ -98,7 +98,7 @@ char *all_tests()
   mu_run_test(test_unshift);
   mu_run_test(test_remove);
   mu_run_test(test_shift);
-  mu_run_test(test_destory);
+  mu_run_test(test_destroy);
 
   return NULL;
 }

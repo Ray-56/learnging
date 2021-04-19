@@ -97,7 +97,7 @@ void destroy_keys(DArray *keys)
     bdestroy(DArray_get(keys, i));
   }
 
-  DArray_destory(keys);
+  DArray_destroy(keys);
 }
 
 void fill_distribution(int *stats, DArray *keys, Hashmap_hash hash_func)

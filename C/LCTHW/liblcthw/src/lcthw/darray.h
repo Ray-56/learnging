@@ -14,7 +14,7 @@ typedef struct DArray {
 
 DArray *DArray_create(size_t element_size, size_t initial_max);
 
-void DArray_destory(DArray *array);
+void DArray_destroy(DArray *array);
 
 void DArray_clear(DArray *array);
 
@@ -26,7 +26,7 @@ int DArray_push(DArray *array, void *el);
 
 void *DArray_pop(DArray *array);
 
-void DArray_clear_destory(DArray *array);
+void DArray_clear_destroy(DArray *array);
 
 #define DArray_last(A) ((A)->contents[(A)->end - 1])
 #define DArrar_first(A) ((A)->contents[0])

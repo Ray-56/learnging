@@ -9,13 +9,13 @@ typedef struct {
 	char *description;
 	int (*init)(void *self);
 	void (*describe)(void *self);
-	void (*destory)(void *self);
+	void (*destroy)(void *self);
 	void *(*move)(void *self, Direction direction);
 	int (*attack)(void *self, int damage);
 } Object;
 
 int Object_init(void *self);
-void Object_destory(void *self);
+void Object_destroy(void *self);
 void Object_descibe(void *self);
 void *Object_move(void *self, Direction direction);
 int Object_attack(void *self, int damage);
